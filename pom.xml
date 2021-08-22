@@ -41,11 +41,13 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
+						<username>august082021</username>
+						<password>Mule@2021</password>
 						<region>${region}</region>
 						<objectStoreV2>${objectStoreV2}</objectStoreV2>
 						<properties>
+							<username>august082021</username>
+							<password>Mule@2021</password>
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
@@ -67,8 +69,8 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>${cloudhub.application.name}</applicationName>
-								<username>${username}</username>
-								<password>${password}</password>
+								<username>august082021</username>
+								<password>Mule@2021</password>
 								<environment>load</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
