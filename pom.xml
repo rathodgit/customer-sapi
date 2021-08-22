@@ -66,9 +66,8 @@
 						<extensions>true</extensions>
 						<configuration>
 							<cloudHubDeployment>
-								<applicationName>${cloudhub.application.name}</applicationName>
-								<username>${username}</username>
-								<password>${password}</password>
+								<applicationName>customer-sapi-1-0-load</applicationName>
+								
 								<environment>load</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
