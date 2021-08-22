@@ -46,7 +46,6 @@
 						<region>${region}</region>
 						<objectStoreV2>${objectStoreV2}</objectStoreV2>
 						<properties>
-
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
@@ -67,8 +66,9 @@
 						<extensions>true</extensions>
 						<configuration>
 							<cloudHubDeployment>
-
 								<applicationName>${cloudhub.application.name}</applicationName>
+								<username>${username}</username>
+								<password>${password}</password>
 								<environment>load</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
