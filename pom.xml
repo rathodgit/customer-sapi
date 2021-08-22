@@ -41,13 +41,11 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>august082021</username>
-						<password>Mule@2021</password>
+						<username>${username}</username>
+						<password>${password}</password>
 						<region>${region}</region>
 						<objectStoreV2>${objectStoreV2}</objectStoreV2>
 						<properties>
-							<username>august082021</username>
-							<password>Mule@2021</password>
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
@@ -68,9 +66,8 @@
 						<extensions>true</extensions>
 						<configuration>
 							<cloudHubDeployment>
-								<applicationName>${cloudhub.application.name}</applicationName>
-								<username>august082021</username>
-								<password>Mule@2021</password>
+								<applicationName>customer-sapi-1-0-load</applicationName>
+								
 								<environment>load</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
