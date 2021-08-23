@@ -13,8 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<username>${username}</username>
-		<password>${password}</password>
+		
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
 		<cloudhub.application.name>customer-sapi-1-0-dummy</cloudhub.application.name>
@@ -42,8 +41,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
 						<region>${region}</region>
 						<objectStoreV2>${objectStoreV2}</objectStoreV2>
 						<properties>
