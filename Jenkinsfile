@@ -28,6 +28,7 @@ pipeline {
       
       steps {
             sh 'mvn -U -V -e -B -DskipTests deploy -Pdev -DmuleDeploy -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%"'
+
       }
     }
     
