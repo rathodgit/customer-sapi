@@ -4,7 +4,7 @@ pipeline {
   
   environment {
   
-    ANYPOINT_CREDS = credentials('ANYPOINT_CREDENTIALS')
+    DEPLOY_CREDS = credentials('ANYPOINT_CREDENTIALS')
     
   }
   
@@ -27,7 +27,8 @@ pipeline {
     stage('Deployment') {
       
       steps {
-            sh 'mvn -U -V -e -B -DskipTests deploy -Pdev -DmuleDeploy -Dusername="%ANYPOINT_CREDS_USR%" -Dpassword="%ANYPOINT_CREDS_PSW%"'
+            sh 'mvn -U -V -e -B -DskipTests deploy -Pdev -DmuleDeploy -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%"'
+
       }
     }
     
