@@ -13,8 +13,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<username>august082021</username>
-		<password>Mule@2021</password>
+		<username>${username}</username>
+		<password>${password}</password>
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
 		<cloudhub.application.name>customer-sapi-1-0-dummy</cloudhub.application.name>
@@ -22,6 +22,7 @@
 		<workers>1</workers>
 		<workerType>micro</workerType>
 		<objectStoreV2>true</objectStoreV2>
+		<munit.version>2.3.2</munit.version>
 	</properties>
 
 	<build>
@@ -50,6 +51,29 @@
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+							<goal>coverage-report</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<formats>
+							<format>html</format>
+						</formats>
+					</coverage>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -67,7 +91,7 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>customer-sapi-1-0-load</applicationName>
-								
+
 								<environment>load</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
@@ -135,6 +159,20 @@
 			<artifactId>mule-apikit-module</artifactId>
 			<version>1.4.1</version>
 			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-runner</artifactId>
+			<version>2.3.2</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-tools</artifactId>
+			<version>2.3.2</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<repositories>
