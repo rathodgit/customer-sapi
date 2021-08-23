@@ -27,7 +27,7 @@ pipeline {
     stage('Deployment') {
       
       steps {
-            sh 'mvn -U -V -e -B -DskipTests deploy -Pdev -DmuleDeploy -Dusername="%DEPLOY_CREDS_USR%" -Dpassword="%DEPLOY_CREDS_PSW%"'
+            sh 'mvn clean package deploy -DmuleDeploy -Dusername="%DEPLOY_CREDS_USR%" -Dpassword="%DEPLOY_CREDS_PSW%"'
 
       }
     }
