@@ -4,7 +4,7 @@ pipeline {
   
   environment {
   
-    DEPLOY_CREDS = credentials('ANYPOINT_CREDENTIALS')
+    DEPLOY_CREDS = credentials('Mule_CREDS')
     
   }
   
