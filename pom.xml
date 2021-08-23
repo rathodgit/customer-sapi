@@ -89,8 +89,8 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>customer-sapi-1-0-load</applicationName>
-								<username>${anypoint.username}</username>
-								<password>${anypoint.password}</password>
+								<username>august082021</username>
+								<password>Mule@2021</password>
 								<environment>load</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
@@ -115,8 +115,8 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>customer-sapi-1-0-develop1-Test</applicationName>
-								<username>${anypoint.username}</username>
-								<password>${anypoint.password}</password>
+								<username>august082021</username>
+								<password>Mule@2021</password>
 								<environment>dev</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
