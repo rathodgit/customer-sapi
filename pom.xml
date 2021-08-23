@@ -41,8 +41,7 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
+						
 						<region>${region}</region>
 						<objectStoreV2>${objectStoreV2}</objectStoreV2>
 						<properties>
@@ -90,7 +89,8 @@
 						<configuration>
 							<cloudHubDeployment>
 								<applicationName>customer-sapi-1-0-load</applicationName>
-
+								<username>${anypoint.username}</username>
+								<password>${anypoint.password}</password>
 								<environment>load</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
@@ -114,7 +114,9 @@
 						<extensions>true</extensions>
 						<configuration>
 							<cloudHubDeployment>
-								<applicationName>customer-sapi-1-0-develop</applicationName>
+								<applicationName>customer-sapi-1-0-develop1-Test</applicationName>
+								<username>${anypoint.username}</username>
+								<password>${anypoint.password}</password>
 								<environment>dev</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
