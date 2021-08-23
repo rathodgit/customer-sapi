@@ -114,7 +114,7 @@
 						<extensions>true</extensions>
 						<configuration>
 							<cloudHubDeployment>
-								<applicationName>${cloudhub.application.name}</applicationName>
+								<applicationName>customer-sapi-1-0-develop</applicationName>
 								<environment>dev</environment>
 								<workers>${workers}</workers>
 								<workerType>${workerType}</workerType>
