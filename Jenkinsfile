@@ -27,7 +27,7 @@ pipeline {
     stage('Deployment') {
       
       steps {
-            sh 'mvn -U -V -e -B -DskipTests deploy -Pdev -DmuleDeploy -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%"'
+            sh 'mvn -U -V -e -B -DskipTests deploy -Pdev -DmuleDeploy -Dusername="%DEPLOY_CREDS_USR%" -Dpassword="%DEPLOY_CREDS_PSW%"'
 
       }
     }
